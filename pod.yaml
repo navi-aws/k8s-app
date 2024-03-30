@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+  labels:
+    app: pinkapp
+spec:
+  containers:
+    - name: web
+      image: p771000/pink-app:latest
+      ports:
+        - name: web
+          containerPort: 80
+          protocol: TCP
